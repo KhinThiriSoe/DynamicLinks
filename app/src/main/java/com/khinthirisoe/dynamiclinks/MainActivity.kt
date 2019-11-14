@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handleDeepLink(intent: Intent) {
+        //  adb shell am start -a android.intent.action.VIEW \ -d "https://httpbin.page.link/iGuj" com.khinthirisoe.dynamiclinks
         FirebaseDynamicLinks.getInstance()
             .getDynamicLink(intent)
             .addOnSuccessListener { pendingDynamicLinkData ->
